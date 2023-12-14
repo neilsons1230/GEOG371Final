@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Display a map on a webpage</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/turf@6.3.0"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <p></p>
+    <div id="mydiv"></div>
+
+    <h1>Global Currents</h1>
+    <button id="toggleButton">View SST</button>
+
+    <br></br>
+
+    <div class="map-container">
+      
+        <div id="map"></div>
+        <div id="bathymetryLegend" class="legend">
+            <h3>Bathymetry</h3>
+            <div class="legend-item" style="background-color: rgb(247, 247, 247);">
+                <div class="legend-color"></div>
+                <div class="legend-label">0m</div>
+            </div>
+            <div class="legend-item" style="background-color: rgb(232, 237, 253);">
+                <div class="legend-color"></div>
+                <div class="legend-label">100m</div>
+            </div>
+            <div class="legend-item" style="background-color: rgb(204, 214, 245);">
+                <div class="legend-color"></div>
+                <div class="legend-label">200m</div>
+            </div>
+            <div class="legend-item" style="background-color: rgb(179, 189, 219);">
+                <div class="legend-color"></div>
+                <div class="legend-label">300m</div>
+            </div>
+            <div class="legend-item" style="background-color: rgb(118, 138, 198);">
+                <div class="legend-color"></div>
+                <div class="legend-label">500m</div>
+            </div>
+            <div class="legend-item" style="background-color: rgb(79, 99, 161);">
+                <div class="legend-color"></div>
+                <div class="legend-label">1000m</div>
+            </div>
+            <div class="legend-item" style="background-color: rgb(48, 61, 100);">
+                <div class="legend-color"></div>
+                <div class="legend-label">7000m</div>
+            </div>
+        </div>
+
+        <br></br>
+
+        <div id="secondLegend" class="legend">
+            <h3>Sea Surface Temperature (SST)</h3>
+            <div class="legend-item" style="background-color:#EA3423;">
+                <div class="legend-color"></div>
+                <div class="legend-label">35°C</div>
+            </div>
+            <div class="legend-item" style="background-color: #EF9135;">
+                <div class="legend-color"></div>
+                <div class="legend-label">28°C</div>
+            </div>
+            <div class="legend-item" style="background-color: #FDF652;">
+                <div class="legend-color"></div>
+                <div class="legend-label">21°C</div>
+            </div>
+            <div class="legend-item" style="background-color: #C6FD8C;">
+                <div class="legend-color"></div>
+                <div class="legend-label">14°C</div>
+            </div>
+            <div class="legend-item" style="background-color: #75FBF9;">
+                <div class="legend-color"></div>
+                <div class="legend-label">7°C</div>
+            </div>
+            <div class="legend-item" style="background-color: #1202F5;">
+                <div class="legend-color"></div>
+                <div class="legend-label">0°C</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js" defer></script>
+</body>
+
+</html>

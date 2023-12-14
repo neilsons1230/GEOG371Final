@@ -1,0 +1,92 @@
+#map {
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgb(180, 180, 237);
+    margin-left: 120px;
+}
+
+.custom-popup-class { 
+    text-align: left;
+    color: rgb(100, 98, 98);
+    font: Verdana; 
+}
+
+h1{
+    font: 30px Verdana;
+    color: rgb(100, 98, 98);
+    text-align: left;
+    background-color: #fff;
+    padding-left: 120px;
+    padding-top: 25px;
+    text-shadow: 0 0 2px rgb(180, 180, 237)
+    
+}
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(60, 90, 180);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-left: 120px;
+
+}
+
+button:hover {
+    background-color: rgb(35, 56, 120);
+}
+
+button:active {
+    background-color: hotpink;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.map-container {
+    display: flex;
+}
+#bathymetryLegend {
+    margin-left: 50px;
+}
+.legend {
+    max-height: 230px;
+    width: 250px; /* Set the desired width for both legends */
+    margin-right: 50px; /* Set the desired distance from the map */
+    color: rgb(100, 98, 98);
+    font: 15px Verdana;
+    text-shadow: 0 0 2px rgb(180, 180, 237);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgb(180, 180, 237);
+    
+}
+
+.legend-item {
+    text-shadow: 5px #fff;
+    box-shadow: 0 0 5px rgb(180, 180, 237);
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: rgb(64, 63, 63);
+    font: 15px Verdana;
+    text-shadow: -1px 0.5px 1px white;
+}
+
+.legend-color {
+    width: 20px;
+    height: 10px;
+    margin-right: 20px;
+}
